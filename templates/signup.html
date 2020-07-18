@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+        <article class="media content-section">
+             <div class="media-body">
+                 <h2>Sign Up</h2>
+                 <form method="post">
+                     {% csrf_token %}
+                     {{ form.as_p}}
+                     <button type="submit">Sign Up</button>
+                 </form>
+                 <p>Already have an account ? <a href="{% url 'login'%}">Log In</a> </p>
+             </div>
+        </article>
+{% endblock content %}

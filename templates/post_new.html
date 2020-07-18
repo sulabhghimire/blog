@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+        <article class="media content-section">
+             <div class="media-body">
+                 <div class="article-metadata">
+                     <h1>New Post</h1>
+                 </div>
+                 <form action="" method="post">
+                     {% csrf_token %}
+                     {{ form.as_p}}
+                     <input type="submit" value="Save">
+                 </form>
+             </div>
+
+        </article>
+{% endblock content %}
